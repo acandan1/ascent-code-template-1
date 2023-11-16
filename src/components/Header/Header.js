@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 const Header = () => {
     const isMobile = useMobileHeader();
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(true);
     const [activePage, setActivePage] = useState(null);
 
     const toggleMenu = () => {
@@ -22,9 +22,18 @@ const Header = () => {
 
     const mobileAnimationVariantReturner = (index) => {
         let delayIndex = index * 0.125;
-   
+
+        const pageArray = ['/', '/about', '/services', '/staff', '/contact'];
+
+        //Apply a different animation to the active page!
+        if (activePage === pageArray[index-1]) {
+            return { hidden: {opacity: 1, x:'-50px', }, visible: { x: 0, opacity: 1, transition: { ease: "easeOut", duration: 0.1, bounce: 0.4, type:"spring" } }}
+        } 
+
         return {hidden: { opacity: 0,x:'-50px' },
         visible: { x: 0, opacity: 1, transition: { ease: "easeOut", duration: 0.5, delay:delayIndex, bounce: 0.4, type:"spring" } }};
+        
+        
     }
 
     useEffect(() => {
