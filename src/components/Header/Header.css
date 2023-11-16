@@ -14,11 +14,9 @@
 }
 
 
+
 /* DESKTOP HEADER DIV */
 .header {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
   font-family: 'Inter', sans-serif;
 }
   
@@ -26,24 +24,14 @@
     height: 75px;
 }
   
-.header-navbar ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-}
   
 .header-navbar ul li {
     margin: 0;
 }
-  
 .header-navbar ul li a {
-    text-decoration: none;
-   
-    color: var(--navbar-text-color);
-    padding: 0.5rem 1rem;
-    border-radius: 2rem;
-    transition: background-color 0.75s ease-in-out;
-    font-size: 25px;
+  @apply px-2 py-4 rounded-3xl text-2xl no-underline;  
+  color: var(--navbar-text-color);
+  transition: background-color 0.5s ease-out;
 }
   
 .header-navbar ul li a:hover {
@@ -54,36 +42,11 @@
 /* MOBILE HEADER DIV */
 .mobile-header {
     color: var(--navbar-text-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
-  .menu-toggle {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: white;
-    cursor: pointer;
   }
   
   .mobile-menu {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 200px;
     background-color: var(--mobile-menu-background-color);
     color: var(--mobile-menu-text-color);
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
   }
 
   .mobile-menu > button {
@@ -91,63 +54,21 @@
   }
   
   .mobile-menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
+    @apply p-0 m-0 flex flex-col gap-2;
   }
   
   .mobile-menu li {
-    margin-bottom: 1rem
+    @apply mb-4;
   }
   
   .mobile-menu a {
-    text-decoration: none;
-    padding: 0.5rem 1rem;
+    @apply no-underline px-2 py-4 text-xl;
     color: var(--mobile-menu-text-color);
-    font-size: 1.2rem;
   }
-
 
 /* ACTIVE HEADER LINK STYLE */ 
 
 .header-active {
-  color: #ff6600; /* Change this to your preferred active link color */
-  font-weight: bold; /* You can customize the styling further based on your design */
-  border-left: 5px solid orange;
-  border-right: 5px solid orange;
-  text-decoration: none; /* Remove the default underline */
-  overflow: hidden;
+  @apply overflow-hidden no-underline border-r-4 border-l-4 border-yellow-500 font-bold text-orange-400;
 }
-
-  
-
-/* Extra Small Devices (Phones) */
-@media (max-width: 576px) {
-    /* Styles for phones */
-  }
-  
-  /* Small Devices (Tablets) */
-  @media (min-width: 577px) and (max-width: 768px) {
-    /* Styles for tablets */
-  }
-  
-  /* Medium Devices (Tablets and Small Laptops) */
-  @media (min-width: 769px) and (max-width: 992px) {
-    /* Styles for medium-sized devices */
-  }
-  
-  /* Large Devices (Laptops and Desktops) */
-  @media (min-width: 993px) and (max-width: 1200px) {
-    /* Styles for larger laptops and desktops */
-  }
-  
-  /* Extra Large Devices (Large Desktops) */
-  @media (min-width: 1201px) {
-    /* Styles for extra-large desktop screens */
-  }
-  
-
   

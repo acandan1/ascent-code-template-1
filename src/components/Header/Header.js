@@ -42,20 +42,19 @@ const Header = () => {
 
 
     return (
-        <header className="header-header">
+        <header className="header-header p-4">
             { isMobile 
             ?(
                 // Render side menu for mobile view
-                <div className="mobile-header">
+                <div className="mobile-header flex justify-between items-center">
                     <img className="header-logo logo-mobile" src={ logo }></img>
                     {/* Add toggle button or icon to show/hide the menu */}
-                    <button className="menu-toggle" onClick={toggleMenu}>
+                    <button className="menu-toggle cursor-pointer text-5xl" onClick={toggleMenu}>
                     {isMenuOpen ? '' : '☰'}
                     </button>
-
                     {isMenuOpen && (
-                    <div className="mobile-menu">
-                        <button className="menu-toggle" onClick={toggleMenu}>
+                    <div className="mobile-menu fixed top-0 right-0 h-full w-48 p-4 flex flex-col items-end">
+                        <button className="menu-toggle cursor-pointer text-5xl" onClick={toggleMenu}>
                             {isMenuOpen ? '✖' : '☰'}
                         </button>
                         
@@ -80,12 +79,16 @@ const Header = () => {
                     </div>
                     )}
                 </div>
-            )  
+            )
+            
+            
+
+
             :(
-                <div className="header">
+                <div className="header flex justify-evenly items-center">
                     <img className="header-logo" src={ logo }></img>
                     <nav className="header-navbar">
-                        <ul>
+                        <ul className="list-none flex gap-4">
                             <motion.li initial="hidden" whileInView="visible" variants={mobileAnimationVariantReturner(1)} viewport={{ once: true }}>
                                 <a href="/" id="header-home">Home</a>
                             </motion.li>
