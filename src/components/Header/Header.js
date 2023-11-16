@@ -56,7 +56,7 @@ const Header = () => {
             ?(
                 // Render side menu for mobile view
                 <div className="mobile-header flex justify-between items-center">
-                    <img className="header-logo logo-mobile" src={ logo }></img>
+                    <img className="header-logo logo-mobile h-20" src={ logo }></img>
                     {/* Add toggle button or icon to show/hide the menu */}
                     <button className="menu-toggle cursor-pointer text-5xl" onClick={toggleMenu}>
                     {isMenuOpen ? '' : '☰'}
@@ -95,7 +95,7 @@ const Header = () => {
 
             :(
                 <div className="header flex justify-evenly items-center">
-                    <img className="header-logo" src={ logo }></img>
+                    <img className="header-logo h-20" src={ logo }></img>
                     <nav className="header-navbar">
                         <ul className="list-none flex gap-4">
                             <motion.li initial="hidden" whileInView="visible" variants={mobileAnimationVariantReturner(1)} viewport={{ once: true }}>

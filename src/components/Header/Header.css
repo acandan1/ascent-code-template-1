@@ -9,7 +9,6 @@
 
   background-color: var(--header-background-color);
   color: var(--header-text-color);
-  padding: 1rem;
   font-family: 'Inter', sans-serif;
 }
 
@@ -20,18 +19,9 @@
   font-family: 'Inter', sans-serif;
 }
   
-.header-logo {
-    height: 75px;
-}
-  
-  
-.header-navbar ul li {
-    margin: 0;
-}
 .header-navbar ul li a {
-  @apply px-2 py-4 rounded-3xl text-2xl no-underline;  
+  @apply px-2 py-4 rounded-3xl text-2xl no-underline transition-all duration-75 ease-out;  
   color: var(--navbar-text-color);
-  transition: background-color 0.5s ease-out;
 }
   
 .header-navbar ul li a:hover {
@@ -50,7 +40,7 @@
   }
 
   .mobile-menu > button {
-    margin-bottom: 25px;
+    @apply mb-6;
   }
   
   .mobile-menu ul {

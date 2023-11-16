@@ -3,5 +3,5 @@
 }
 
 .footer-navigation a {
-    font-weight: bold;
+    @apply font-extrabold;
 }
