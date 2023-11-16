@@ -1,0 +1,153 @@
+
+/* MAIN HEADER DIV */
+.header-header {
+  --header-background-color: #333;
+  --header-text-color: white;
+  --navbar-link-hover-color: #555;
+  --mobile-menu-background-color:#c02b2b;
+  --mobile-menu-text-color: white;
+
+  background-color: var(--header-background-color);
+  color: var(--header-text-color);
+  padding: 1rem;
+  font-family: 'Inter', sans-serif;
+}
+
+
+/* DESKTOP HEADER DIV */
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+}
+  
+.header-logo {
+    height: 75px;
+}
+  
+.header-navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+  
+.header-navbar ul li {
+    margin: 0;
+}
+  
+.header-navbar ul li a {
+    text-decoration: none;
+   
+    color: var(--navbar-text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    transition: background-color 0.75s ease-in-out;
+    font-size: 25px;
+}
+  
+.header-navbar ul li a:hover {
+    background-color: var(--navbar-link-hover-color);
+}
+
+
+/* MOBILE HEADER DIV */
+.mobile-header {
+    color: var(--navbar-text-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .menu-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 200px;
+    background-color: var(--mobile-menu-background-color);
+    color: var(--mobile-menu-text-color);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .mobile-menu > button {
+    margin-bottom: 25px;
+  }
+  
+  .mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .mobile-menu li {
+    margin-bottom: 1rem
+  }
+  
+  .mobile-menu a {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    color: var(--mobile-menu-text-color);
+    font-size: 1.2rem;
+  }
+
+
+/* ACTIVE HEADER LINK STYLE */ 
+
+.header-active {
+  color: #ff6600; /* Change this to your preferred active link color */
+  font-weight: bold; /* You can customize the styling further based on your design */
+  border-left: 5px solid orange;
+  border-right: 5px solid orange;
+  text-decoration: none; /* Remove the default underline */
+  overflow: hidden;
+}
+
+  
+
+/* Extra Small Devices (Phones) */
+@media (max-width: 576px) {
+    /* Styles for phones */
+  }
+  
+  /* Small Devices (Tablets) */
+  @media (min-width: 577px) and (max-width: 768px) {
+    /* Styles for tablets */
+  }
+  
+  /* Medium Devices (Tablets and Small Laptops) */
+  @media (min-width: 769px) and (max-width: 992px) {
+    /* Styles for medium-sized devices */
+  }
+  
+  /* Large Devices (Laptops and Desktops) */
+  @media (min-width: 993px) and (max-width: 1200px) {
+    /* Styles for larger laptops and desktops */
+  }
+  
+  /* Extra Large Devices (Large Desktops) */
+  @media (min-width: 1201px) {
+    /* Styles for extra-large desktop screens */
+  }
+  
+
+  
